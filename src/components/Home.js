@@ -1,13 +1,20 @@
 import React from 'react'
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 export const Home = () => {
   return (
     <div className="homepage">
-      <i class="fa-solid fa-heart hearts"></i>
-      <i class="fa-solid fa-heart-pulse hearts"></i>
-      <h1>Welcome to the couple game</h1>
-      <i class="fa-solid fa-heart-pulse hearts"></i>
-      <i class="fa-solid fa-heart hearts"></i>
+      <Row>
+        <h1 className="welcome">Welcome to the couple game!!</h1>
+      </Row>
+      <Row>
+        <Col></Col>
+        <Col></Col>
+        <Col></Col>
+        <Button variant="success" className="next">Next</Button>
+      </Row>
     </div>
   );
 }

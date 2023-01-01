@@ -1,5 +1,5 @@
 .app {
-  background: linear-gradient(rgba(254, 98, 20, 0.5), rgb(255, 0, 128, 0.5));
+  background-color: rgba(249, 88, 115, 0.664);
   min-height: 100vh;
   position: relative;
 }
@@ -7,12 +7,44 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  color: red;
-  transform:translate(-50%, -50%);
-  display:flex;
+  color:  green;
+  transform: translate(-50%, -50%);
+  display: flex;
 }
-.hearts{
-    font-size:3rem;
-    transform:translateY(.3rem);
-    margin-right:.3rem;
+.hearts {
+  font-size: 3rem;
+  transform: translateY(0.3rem);
+  margin-right: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  opacity:.5;
+}
+.welcome{
+  width:100%;
+  font-weight:bold;
+  font-style: italic;
+  font-family: "caveat", "Helvetica Neue",
+}
+.next{
+  transform:translateY(3rem)
+}
+.urs_number{
+  display:flex;
+  flex-direction: column;
+}
+.countrycode{
+  display:inline;
+  width:8rem;
+} 
+.number_submit{
+  transform:translateY(1rem)
+}  
+.numbers_label{
+  font-size:1.4rem;
+  font-weight:500;
+  transform:translateX(30%)
 }
