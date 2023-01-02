@@ -60,8 +60,57 @@
   color: #0066ff;
 }
 
-#form_control{
-    background: rgba(0, 0, 0, 0.261);
-    padding:.8rem;
-    font-size:1.15rem;
+#form_control {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.8rem;
+  font-size: 1.15rem;
+}
+.login_button {
+  width: 100%;
+}
+.forgotten_password {
+  text-align: center;
+}
+.forgotten_password__link {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.create_new__acount {
+  transform: translateX(2rem);
+}
+.footer_list {
+  list-style-type: disc;
+}
+/* error page */
+.error_message {
+  min-width: 100vw;
+  background-color: rgb(222, 6, 6);
+  color: white;
+}
+.find_account {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.icon_div{
+  position: relative;
+  margin-top:3rem;
+}
+.mobile_icon::after {
+  content: " ";
+  display:table;
+  clear:both;
+ width: 5rem;
+ height: 5rem;
+background-color: #0066ff9e;
+border-radius: 50%;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+z-index:-1;
+}
+.mobile_icon__icon{
+  z-index: 10;
+  font-size: 3rem;
+  color:rgb(144, 139, 139)
 }

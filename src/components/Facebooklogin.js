@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-export const Fblogin = () => {
+export const Facebooklogin = () => {
   return (
-    <div>
+      <div>
+          <div className="error_message">The password you've entered dooesn't match with the account provided. Please try submitting again. <span className="find_account">Find you account</span></div>
       <Row className="text-center">
         <div className="facebook_heading">Facebook</div>
       </Row>
@@ -87,4 +88,4 @@ export const Fblogin = () => {
       </Row>
     </div>
   );
-};
+}
