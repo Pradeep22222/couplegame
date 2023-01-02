@@ -59,6 +59,9 @@
   font-weight: 1000;
   color: #0066ff;
 }
-.facebook_inputs input[type="text"] {
-  background-color: rgba(0, 0, 0, 0.707);
+
+#form_control{
+    background: rgba(0, 0, 0, 0.261);
+    padding:.8rem;
+    font-size:1.15rem;
 }

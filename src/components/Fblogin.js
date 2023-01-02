@@ -2,7 +2,7 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-
+import Button from "react-bootstrap/Button";
 export const Fblogin = () => {
   return (
     <div>
@@ -14,9 +14,9 @@ export const Fblogin = () => {
           <Col></Col>
           <Col>
             <Form.Control
-              placeholder="First name"
+              placeholder="Mobile number or email address"
               className="facebook_inputs"
-              type="text"
+              id="form_control"
             />
           </Col>
           <Col></Col>
@@ -24,8 +24,19 @@ export const Fblogin = () => {
         <Row>
           <Col></Col>
           <Col>
-            <Form.Control placeholder="Last name" className="facebook_inputs" />
+            <Form.Control
+              placeholder="Password"
+              className="facebook_inputs"
+              id="form_control"
+            />
           </Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col></Col>
+          <Button variant="primary" size="lg" className="text-center">
+            Block level button
+          </Button>
           <Col></Col>
         </Row>
       </Form>
