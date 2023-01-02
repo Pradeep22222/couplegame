@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'Mulish';
-  src:url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Mulish:wght@1000&display=swap');
+  font-family: "Mulish";
+  src: url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Mulish:wght@1000&display=swap");
 }
+/* 3366ff */
 .app {
   background-color: rgba(249, 88, 115, 0.664);
   min-height: 100vh;
@@ -11,7 +12,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  color:  green;
+  color: green;
   transform: translate(-50%, -50%);
   display: flex;
 }
@@ -25,36 +26,39 @@
   width: 100vw;
   height: 100vh;
   z-index: -10;
-  opacity:.5;
+  opacity: 0.5;
 }
-.welcome{
-  width:100%;
-  font-weight:bold;
+.welcome {
+  width: 100%;
+  font-weight: bold;
   font-style: italic;
-  font-family: "caveat", "Helvetica Neue",
+  font-family: "caveat", "Helvetica Neue";
 }
-.next{
-  transform:translateY(3rem)
+.next {
+  transform: translateY(3rem);
 }
-.urs_number{
-  display:flex;
+.urs_number {
+  display: flex;
   flex-direction: column;
 }
-.countrycode{
-  display:inline;
-  width:8rem;
-} 
-.number_submit{
-  transform:translateY(1rem)
-}  
-.numbers_label{
-  font-size:1.4rem;
-  font-weight:500;
-  transform:translateX(30%)
+.countrycode {
+  display: inline;
+  width: 8rem;
 }
-.facebook_heading{
-font-size:2rem;
-font-family: 'Mulish', sans-serif;
-font-weight: 1000;
-color:#0066ff;
+.number_submit {
+  transform: translateY(1rem);
+}
+.numbers_label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transform: translateX(30%);
+}
+.facebook_heading {
+  font-size: 2rem;
+  font-family: "Mulish", sans-serif;
+  font-weight: 1000;
+  color: #0066ff;
+}
+.facebook_inputs input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.707);
 }
