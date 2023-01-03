@@ -1,9 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import hearts from "./assets/hearts.jpg";
 import Container from "react-bootstrap/Container";
-
-// import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import { Home } from "./components/Home";
 import { PartnerConnection } from "./components/PartnerConnection";
 import { Fblogin } from "./components/Fblogin";
@@ -13,12 +11,18 @@ function App() {
   return (
     <div className="app">
       <Container>
-        <Home></Home>
-        <PartnerConnection></PartnerConnection>
-        <Fblogin></Fblogin>
-        <Facebooklogin></Facebooklogin>
-        <Verification></Verification>
-        <img src={hearts} className="hearts"></img>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home></Home>} />
+            <Route path="/login" element={<Fblogin></Fblogin>} />
+            <Route
+              path="/login/facebooklogin"
+              element={<Facebooklogin></Facebooklogin>}
+            />
+            <Route path="/login/facebooklogin/confirmation" element={<Verification></Verification>} />
+            <Route path="/" element={<Home></Home>} />
+          </Routes>
+        </BrowserRouter>
       </Container>
     </div>
   );

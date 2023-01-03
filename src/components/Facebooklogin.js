@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
+import { Link } from 'react-router-dom';
 export const Facebooklogin = () => {
   return (
       <div>
@@ -37,7 +38,7 @@ export const Facebooklogin = () => {
           <Col></Col>
           <Col>
             <Button variant="primary" size="lg" className="login_button">
-              Log In
+              <Link to="confirmation">Log In</Link>
             </Button>
           </Col>
           <Col></Col>

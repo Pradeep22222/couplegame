@@ -3,19 +3,12 @@
   src: url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Mulish:wght@1000&display=swap");
 }
 /* 3366ff */
-.app {
+.home {
   background-color: rgba(249, 88, 115, 0.664);
   min-height: 100vh;
   position: relative;
 }
-.homepage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: green;
-  transform: translate(-50%, -50%);
-  display: flex;
-}
+
 .hearts {
   font-size: 3rem;
   transform: translateY(0.3rem);
