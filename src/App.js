@@ -10,7 +10,7 @@ import { Verification } from "./components/Verification";
 function App() {
   return (
     <div className="app">
-      <Container>
+
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home></Home>} />
@@ -23,7 +23,6 @@ function App() {
             <Route path="/" element={<Home></Home>} />
           </Routes>
         </BrowserRouter>
-      </Container>
     </div>
   );
 }
