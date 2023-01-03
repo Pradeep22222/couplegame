@@ -114,3 +114,8 @@ z-index:-1;
   font-size: 3rem;
   color:rgb(144, 139, 139)
 }
+.link_underline{
+  text-decoration: none;
+  color: #0066ff;
+
+}
