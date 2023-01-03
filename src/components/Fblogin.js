@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Fblogin = () => {
   return (
     <div>
-      <Row className="text-center">
+      <Row className="text-center mt-3 mb-2">
         <div className="facebook_heading">Facebook</div>
       </Row>
       <Form>
@@ -18,7 +18,15 @@ export const Fblogin = () => {
               placeholder="Mobile number or email address"
               className="facebook_inputs"
               id="form_control"
+              type="text"
+              required
             />
+            <span>
+              <i class="fa-light fa-eye"></i>
+            </span>
+            <span>
+              <i class="fa-light fa-eye"></i>
+            </span>
           </Col>
           <Col></Col>
         </Row>
@@ -29,6 +37,8 @@ export const Fblogin = () => {
               placeholder="Password"
               className="facebook_inputs"
               id="form_control"
+              required
+              type="password"
             />
           </Col>
           <Col></Col>
@@ -36,7 +46,12 @@ export const Fblogin = () => {
         <Row className="mb-3">
           <Col></Col>
           <Col>
-            <Button variant="primary" size="lg" className="login_button">
+            <Button
+              variant="primary"
+              size="lg"
+              className="login_button"
+              type="submit"
+            >
               <Link to="facebooklogin">Log In</Link>
             </Button>
           </Col>
