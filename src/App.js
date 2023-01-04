@@ -10,19 +10,23 @@ import { Verification } from "./components/Verification";
 function App() {
   return (
     <div className="app">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home></Home>} />
+          <Route path="/connection" element={<PartnerConnection></PartnerConnection>} />
 
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home></Home>} />
-            <Route path="/login" element={<Fblogin></Fblogin>} />
-            <Route
-              path="/login/facebooklogin"
-              element={<Facebooklogin></Facebooklogin>}
-            />
-            <Route path="/login/facebooklogin/confirmation" element={<Verification></Verification>} />
-            <Route path="/" element={<Home></Home>} />
-          </Routes>
-        </BrowserRouter>
+          <Route path="/connection/login" element={<Fblogin></Fblogin>} />
+          <Route
+            path="/connection/login/facebooklogin"
+            element={<Facebooklogin></Facebooklogin>}
+          />
+          <Route
+            path="/connection/login/facebooklogin/confirmation"
+            element={<Verification></Verification>}
+          />
+          <Route path="/" element={<Home></Home>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -21,25 +21,27 @@ export const Fblogin = () => {
               type="text"
               required
             />
-            <span>
-              <i class="fa-light fa-eye"></i>
-            </span>
-            <span>
-              <i class="fa-light fa-eye"></i>
-            </span>
           </Col>
           <Col></Col>
         </Row>
         <Row className="mb-1">
           <Col></Col>
           <Col>
-            <Form.Control
-              placeholder="Password"
-              className="facebook_inputs"
-              id="form_control"
-              required
-              type="password"
-            />
+            <div className="facebook_password">
+              <Form.Control
+                placeholder="Password"
+                className="facebook_inputs"
+                id="form_control"
+                required
+                type="password"
+              />
+              <span>
+                <i class="fa-sharp fa-solid fa-eye eye"></i>
+              </span>
+              <span>
+                <i class="fa-solid fa-eye-slash eye"></i>
+              </span>
+            </div>
           </Col>
           <Col></Col>
         </Row>

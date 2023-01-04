@@ -23,7 +23,7 @@ export const Home = () => {
           </ul>
         </div>
         <div>
-          <Link to="login">
+          <Link to="connection">
             <Button variant="success" className="next">
               Next
             </Button>

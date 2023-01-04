@@ -12,14 +12,14 @@
   min-height: 100vh;
   position: relative;
 }
-.home_content{
+.home_content {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%)
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .home_list {
-  list-style:circle;
+  list-style: circle;
   font-size: 1.3rem;
   font-style: italic;
   text-decoration: underline;
@@ -45,7 +45,21 @@
 .next {
   position: relative;
   left: 60%;
-  width:6rem;
+  width: 6rem;
+}
+/* connection page */
+.connection {
+  background-image: url(../src/assets/connection.jpeg);
+  min-width: 100vw;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+.connection_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .urs_number {
   display: flex;
@@ -63,6 +77,8 @@
   font-weight: 500;
   transform: translateX(30%);
 }
+/* fblog in */
+
 .facebook_heading {
   font-size: 2rem;
   font-family: "Mulish", sans-serif;
@@ -80,6 +96,7 @@
 }
 .forgotten_password {
   text-align: center;
+
 }
 .forgotten_password__link {
   text-decoration: none;
@@ -90,6 +107,17 @@
 }
 .footer_list {
   list-style-type: disc;
+}
+.facebook_password {
+  position: relative;
+}
+.eye {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top:0;
+  background-color: rgba(208, 203, 203, 0.458);
+  padding:1rem;
 }
 /* error page */
 .error_message {
