@@ -7,6 +7,9 @@
   display: table;
   margin: 0 auto;
 }
+.bold{
+  font-weight:bold;
+}
 .home {
   background-color: rgba(249, 88, 115, 0.664);
   min-height: 100vh;
@@ -139,6 +142,17 @@
   font-weight: bold;
   font-size: 1.1rem;
 }
+/* authentication */
+.authentication_page{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+   width:100%;
+}
+.authentication_heading{
+  font-size:1.3rem;
+}
 .icon_div {
   position: relative;
   margin-top: 3rem;
@@ -161,6 +175,14 @@
   z-index: 10;
   font-size: 3rem;
   color: rgb(144, 139, 139);
+}
+.enter_code{
+  margin:1.5rem 0 .5rem;
+  
+}
+.resend_code{
+  margin:.5rem 0;
+  display: block;
 }
 .link_underline {
   text-decoration: none;
