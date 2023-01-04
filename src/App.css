@@ -96,14 +96,13 @@
 }
 .forgotten_password {
   text-align: center;
-
 }
 .forgotten_password__link {
   text-decoration: none;
   font-size: 1.4rem;
 }
-.create_new__acount {
-  transform: translateX(2rem);
+.create_new__account {
+  transform: translateX(3.2rem);
 }
 .footer_list {
   list-style-type: disc;
@@ -115,15 +114,26 @@
   font-size: 1.5rem;
   position: absolute;
   right: 0;
-  top:0;
+  top: 0;
   background-color: rgba(208, 203, 203, 0.458);
-  padding:1rem;
+  padding: 1rem;
 }
 /* error page */
 .error_message {
   min-width: 100vw;
   background-color: rgb(222, 6, 6);
   color: white;
+  text-align: center;
+}
+#form_control__error1,  #form_control__error2{
+   background: rgba(0, 0, 0, 0.1);
+  padding: 0.8rem;
+  font-size: 1.15rem;
+  outline:.5px solid red;
+}
+#form_control__error1:focus, #form_control__error2:focus{
+  outline:none;
+
 }
 .find_account {
   font-weight: bold;

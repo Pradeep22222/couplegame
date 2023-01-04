@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 export const Facebooklogin = () => {
   return (
-      <div>
-          <div className="error_message">The password you've entered dooesn't match with the account provided. Please try submitting again. <span className="find_account">Find you account</span></div>
+    <div>
+      <div className="error_message">
+        The password you've entered dooesn't match with the account provided.
+        Please try submitting again.{" "}
+        <span className="find_account">Find your account</span>
+      </div>
       <Row className="text-center">
         <div className="facebook_heading">Facebook</div>
       </Row>
@@ -18,7 +22,7 @@ export const Facebooklogin = () => {
             <Form.Control
               placeholder="Mobile number or email address"
               className="facebook_inputs"
-              id="form_control"
+              id="form_control__error1"
             />
           </Col>
           <Col></Col>
@@ -29,7 +33,7 @@ export const Facebooklogin = () => {
             <Form.Control
               placeholder="Password"
               className="facebook_inputs"
-              id="form_control"
+              id="form_control__error2"
             />
           </Col>
           <Col></Col>
@@ -37,9 +41,16 @@ export const Facebooklogin = () => {
         <Row className="mb-3">
           <Col></Col>
           <Col>
-            <Button variant="primary" size="lg" className="login_button">
-              <Link to="confirmation">Log In</Link>
-            </Button>
+            <Link to="confirmation">
+              <Button
+                variant="primary"
+                size="lg"
+                className="login_button"
+                type="submit"
+              >
+                Log In
+              </Button>
+            </Link>
           </Col>
           <Col></Col>
         </Row>
@@ -71,7 +82,7 @@ export const Facebooklogin = () => {
           <Col></Col>
           <Col></Col>
           <Col>
-            <Button variant="success" className="create_new__acount">
+            <Button variant="success" className="create_new__account">
               Create New Account
             </Button>
           </Col>
@@ -89,4 +100,4 @@ export const Facebooklogin = () => {
       </Row>
     </div>
   );
-}
+};

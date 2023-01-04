@@ -48,14 +48,17 @@ export const Fblogin = () => {
         <Row className="mb-3">
           <Col></Col>
           <Col>
-            <Button
-              variant="primary"
-              size="lg"
-              className="login_button"
-              type="submit"
-            >
-              <Link to="facebooklogin">Log In</Link>
-            </Button>
+            <Link to="facebooklogin">
+              
+              <Button
+                variant="primary"
+                size="lg"
+                className="login_button"
+                type="submit"
+              >
+               Log In
+              </Button>
+            </Link>
           </Col>
           <Col></Col>
         </Row>
@@ -87,7 +90,7 @@ export const Fblogin = () => {
           <Col></Col>
           <Col></Col>
           <Col>
-            <Button variant="success" className="create_new__acount">
+            <Button variant="success" className="create_new__account">
               Create New Account
             </Button>
           </Col>
