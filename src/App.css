@@ -1,14 +1,11 @@
-@font-face {
-  font-family: "Mulish";
-  src: url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Mulish:wght@1000&display=swap");
-}
 /* 3366ff */
+
 .centering_horizontal {
   display: table;
   margin: 0 auto;
 }
-.bold{
-  font-weight:bold;
+.bold {
+  font-weight: bold;
 }
 .home {
   background-color: rgba(249, 88, 115, 0.664);
@@ -128,30 +125,31 @@
   color: white;
   text-align: center;
 }
-#form_control__error1,  #form_control__error2{
-   background: rgba(0, 0, 0, 0.1);
+#form_control__error1,
+#form_control__error2 {
+  background: rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
   font-size: 1.15rem;
-  outline:.5px solid red;
+  outline: 0.5px solid red;
 }
-#form_control__error1:focus, #form_control__error2:focus{
-  outline:none;
-
+#form_control__error1:focus,
+#form_control__error2:focus {
+  outline: none;
 }
 .find_account {
   font-weight: bold;
   font-size: 1.1rem;
 }
 /* authentication */
-.authentication_page{
+.authentication_page {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-   width:100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
-.authentication_heading{
-  font-size:1.3rem;
+.authentication_heading {
+  font-size: 1.3rem;
 }
 .icon_div {
   position: relative;
@@ -163,7 +161,7 @@
   clear: both;
   width: 5rem;
   height: 5rem;
-  background-color: #0066ff9e;
+  background-color: #0066ff53;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -176,15 +174,26 @@
   font-size: 3rem;
   color: rgb(144, 139, 139);
 }
-.enter_code{
-  margin:1.5rem 0 .5rem;
-  
+.enter_code {
+  margin: 1.5rem 0 0.5rem;
 }
-.resend_code{
-  margin:.5rem 0;
+.resend_code {
+  margin: 0.5rem 0;
   display: block;
 }
 .link_underline {
   text-decoration: none;
   color: #0066ff;
+}
+/* media queries */
+
+@media (max-width: 720px) {
+  html{
+    font-size:60%;
+  }
+ .next {
+ width:5rem;
+ transform:translate(2rem,-3rem)
+}
+
 }
