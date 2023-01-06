@@ -188,9 +188,9 @@
 /* media queries */
 
 @media (max-width: 720px) {
-  html{
+  /* html{
     font-size:60%;
-  }
+  } */
  .next {
  width:5rem;
  transform:translate(2rem,-3rem)
