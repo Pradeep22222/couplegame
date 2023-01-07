@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export const Fblogin = () => {
   return (
     <div>
-      <Row className="text-center mt-3 mb-2">
+      <Row className="text-center mt-3 mb-1">
         <div className="facebook_heading">Facebook</div>
       </Row>
       <Form>
