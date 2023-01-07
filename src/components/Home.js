@@ -22,9 +22,9 @@ export const Home = () => {
             <li>End with dare....</li>
           </ul>
         </div>
-        <div>
+        <div className="next_div">
           <Link to="connection">
-            <Button variant="success" className="next">
+            <Button variant="success" size="sm" className="next">
               Next
             </Button>
           </Link>

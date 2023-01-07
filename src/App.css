@@ -187,3 +187,16 @@
 }
 /* media queries */
 
+@media (max-width:800px){
+  .welcome{
+    font-size:1.5rem;
+    transform:translate(0rem,2rem)
+  }
+  .home_list{
+    font-size:.9rem;
+  }
+  .next{
+   transform:translate(0, -2rem);
+   width:4rem;
+  }
+}
