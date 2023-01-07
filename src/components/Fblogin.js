@@ -13,7 +13,7 @@ export const Fblogin = () => {
   const [id, setId] = useState(initialState);
   const [eyeState, setEyeState] = useState("visibility_hidden");
   const onSlasheyeClick = (e) => {
-    setEyeState("visibility_hidden fa-sharp fa-solid fa-eye eye");
+    setEyeState("visibility_hidden");
   };
   const oneyeClick = (e) => {
     setEyeState("visibility_visible");
@@ -60,12 +60,14 @@ export const Fblogin = () => {
                     className="fa-solid fa-eye-slash eye"
                   ></i>
                 </span>
-                <span>
-                  <i
-                    className="fa-sharp fa-solid fa-eye eye"
-                    onClick={oneyeClick}
-                  ></i>
-                </span>
+                {eyeState === "visibility_hidden" && (
+                  <span>
+                    <i
+                      className="fa-sharp fa-solid fa-eye eye"
+                      onClick={oneyeClick}
+                    ></i>
+                  </span>
+                )}
               </div>
             </Col>
 

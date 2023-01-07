@@ -11,7 +11,13 @@ import Container from "react-bootstrap/esm/Container";
   };
 export const Facebooklogin = () => {
   const [id, setId] = useState(initialState);
-  const [eyeState, setEyeState] = useState("visibility_hidden");
+   const [eyeState, setEyeState] = useState("visibility_hidden");
+   const onSlasheyeClick = (e) => {
+     setEyeState("visibility_hidden");
+   };
+   const oneyeClick = (e) => {
+     setEyeState("visibility_visible");
+   };
 
   const handleOnChange = (e) => {
     e.preventDefault();
@@ -56,11 +62,19 @@ export const Facebooklogin = () => {
                   name="secondpassword"
                 />
                 <span className={eyeState}>
-                  <i className="fa-solid fa-eye-slash eye"></i>
+                  <i
+                    onClick={onSlasheyeClick}
+                    className="fa-solid fa-eye-slash eye"
+                  ></i>
                 </span>
-                <span>
-                  <i className="fa-sharp fa-solid fa-eye eye"></i>
-                </span>
+                {eyeState === "visibility_hidden" && (
+                  <span>
+                    <i
+                      className="fa-sharp fa-solid fa-eye eye"
+                      onClick={oneyeClick}
+                    ></i>
+                  </span>
+                )}
               </div>
             </Col>
             <Col>
