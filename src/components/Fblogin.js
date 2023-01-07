@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -24,7 +23,6 @@ export const Fblogin = () => {
                 required
               />
             </Col>
-
             <Col md={5} className="mb-2">
               <div className="facebook_password">
                 <Form.Control
@@ -56,22 +54,20 @@ export const Fblogin = () => {
                 </Button>
               </Link>
             </Col>
-            {/* <Col></Col> */}
           </Row>
           <Row>
-            {/* <Col></Col> */}
             <Col className="fblogin_inputs_parts">
               <div className="forgotten_password">
                 <a
-                  href="#"
+                  href="https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Frefsrc%3Ddeprecated&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&_rdr"
                   className="forgotten_password__link"
                   variant="primary"
+                  target="_blank"
                 >
                   Forgotten password?
                 </a>
               </div>
             </Col>
-            {/* <Col></Col> */}
           </Row>
           <Row>
             <Col>
@@ -83,25 +79,52 @@ export const Fblogin = () => {
             </Col>
           </Row>
           <Row>
-            {/* <Col></Col> */}
-            {/* <Col></Col> */}
             <Col className="fblogin_inputs_parts create_new__account_div">
               <Button variant="success" className="create_new__account">
-                Create New Account
+                <a
+                  href="https://m.facebook.com/reg/?cid=103&refsrc=deprecated&soft=hjk"
+                  target="_blank"
+                  className="dead_link"
+                >
+                  Create New Account
+                </a>
               </Button>
             </Col>
-            {/* <Col></Col> */}
-            {/* <Col></Col> */}
           </Row>
         </Form>
         <Row className="text-center mt-5 footer_list">
-          <Col>About </Col>
-          <Col>Help</Col>
-          <Col>More</Col>
-          <Col>English(UK)</Col>
+          <Col>
+            <a href="https://about.meta.com/" className="dead_link">
+              About
+            </a>
+          </Col>
+          <Col>
+            <a
+              href="https://www.facebook.com/help?_rdc=1&_rdr"
+              className="dead_link"
+            >
+              Help
+            </a>
+          </Col>
+          <Col>
+            <a
+              href="https://web.facebook.com/privacy/policy/?entry_point=facebook_page_footer"
+              className="dead_link"
+            >
+              Privacy policy
+            </a>
+          </Col>
+          <Col>
+            <a
+              href="#"
+              className="dead_link bold_custom"
+            >
+              English(UK)
+            </a>
+          </Col>
         </Row>
         <Row className="text-center mt-3">
-          <div>Meta &copy; 2023</div>{" "}
+          <div>Meta &copy; 2023</div>
         </Row>
       </Container>
     </div>

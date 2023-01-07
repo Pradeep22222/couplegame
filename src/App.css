@@ -4,6 +4,16 @@
   display: table;
   margin: 0 auto;
 }
+.bold_custom{
+  font-weight:500;
+}
+.dead_link,
+.dead_link:hover,
+.dead_link:active {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
 .bold {
   font-weight: bold;
 }
@@ -144,7 +154,7 @@
 .find_account {
   font-weight: bold;
   text-decoration: underline;
-  color:white;
+  color: white;
 }
 /* authentication */
 .authentication_page {
@@ -247,8 +257,7 @@
     margin: 0 auto;
   }
   /* error page */
-  .error_message{
-    font-size:.8rem;
+  .error_message {
+    font-size: 0.8rem;
   }
- 
 }
