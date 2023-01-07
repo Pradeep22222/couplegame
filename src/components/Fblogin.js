@@ -5,18 +5,25 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-  const initialState = {
-    firstusername: "",
-    firstpassword: "",
-  };
+const initialState = {
+  firstusername: "",
+  firstpassword: "",
+};
 export const Fblogin = () => {
   const [id, setId] = useState(initialState);
-  const handleOnChange = e => {
+  const [eyeState, setEyeState] = useState("visibility_hidden");
+  const onSlasheyeClick = (e) => {
+    setEyeState("visibility_hidden fa-sharp fa-solid fa-eye eye");
+  };
+  const oneyeClick = (e) => {
+    setEyeState("visibility_visible");
+  };
+  const handleOnChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
-    setId({...id, [name]:value})
-  }
-  console.log(id)
+    setId({ ...id, [name]: value });
+  };
+  console.log(eyeState);
   return (
     <div>
       <Container>
@@ -47,11 +54,17 @@ export const Fblogin = () => {
                   name="firstpassword"
                   onChange={handleOnChange}
                 />
-                <span>
-                  <i className="fa-sharp fa-solid fa-eye eye"></i>
+                <span className={eyeState}>
+                  <i
+                    onClick={onSlasheyeClick}
+                    className="fa-solid fa-eye-slash eye"
+                  ></i>
                 </span>
                 <span>
-                  <i className="fa-solid fa-eye-slash eye"></i>
+                  <i
+                    className="fa-sharp fa-solid fa-eye eye"
+                    onClick={oneyeClick}
+                  ></i>
                 </span>
               </div>
             </Col>

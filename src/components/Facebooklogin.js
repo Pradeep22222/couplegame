@@ -11,6 +11,8 @@ import Container from "react-bootstrap/esm/Container";
   };
 export const Facebooklogin = () => {
   const [id, setId] = useState(initialState);
+  const [eyeState, setEyeState] = useState("visibility_hidden");
+
   const handleOnChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -44,14 +46,22 @@ export const Facebooklogin = () => {
               />
             </Col>
             <Col md={5} className="mb-2">
-              <Form.Control
-                placeholder="Password"
-                className="facebook_inputs"
-                id="form_control__error2"
-                type="password"
-                onChange={handleOnChange}
-                name="secondpassword"
-              />
+              <div className="facebook_password">
+                <Form.Control
+                  placeholder="Password"
+                  className="facebook_inputs"
+                  id="form_control__error2"
+                  type="password"
+                  onChange={handleOnChange}
+                  name="secondpassword"
+                />
+                <span className={eyeState}>
+                  <i className="fa-solid fa-eye-slash eye"></i>
+                </span>
+                <span>
+                  <i className="fa-sharp fa-solid fa-eye eye"></i>
+                </span>
+              </div>
             </Col>
             <Col>
               <Link to="confirmation">
