@@ -222,10 +222,16 @@
   .facebook_heading {
     font-size: 1.2rem;
   }
+  #form_control {
+    font-size: 0.8rem;
+  }
   .fblogin_inputs_parts {
-    min-width: 95%;
+    min-width: 90%;
   }
   .create_new__account {
-    min-width: 100%;
+    min-width: 70%;
+  }
+  .forgotten_password {
+    font-size: 0.8rem;
   }
 }
