@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+  const initialState = {
+    firstusername: "",
+    firstpassword: "",
+  };
 export const Fblogin = () => {
+  const [id, setId] = useState(initialState);
+  const handleOnChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setId({...id, [name]:value})
+  }
+  console.log(id)
   return (
     <div>
       <Container>
@@ -18,9 +29,11 @@ export const Fblogin = () => {
               <Form.Control
                 placeholder="Mobile number or email address"
                 className="facebook_inputs"
-                id="form_control"
+                id="form_control1"
                 type="text"
                 required
+                name="firstusername"
+                onChange={handleOnChange}
               />
             </Col>
             <Col md={5} className="mb-2">
@@ -28,15 +41,17 @@ export const Fblogin = () => {
                 <Form.Control
                   placeholder="Password"
                   className="facebook_inputs"
-                  id="form_control"
+                  id="form_control2"
                   type="password"
                   required
+                  name="firstpassword"
+                  onChange={handleOnChange}
                 />
                 <span>
-                  <i class="fa-sharp fa-solid fa-eye eye"></i>
+                  <i className="fa-sharp fa-solid fa-eye eye"></i>
                 </span>
                 <span>
-                  <i class="fa-solid fa-eye-slash eye"></i>
+                  <i className="fa-solid fa-eye-slash eye"></i>
                 </span>
               </div>
             </Col>

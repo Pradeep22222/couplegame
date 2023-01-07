@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,6 +6,13 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/esm/Container";
 
 export const Verification = () => {
+  const [code, setCode] = useState("");
+  const handleOnChange = (e) => {
+    e.preventDefault();
+    const { value } = e.target;
+    setCode(value);
+  };
+  console.log(code);
   return (
     <div>
       <div className="authentication_page">
@@ -30,6 +37,7 @@ export const Verification = () => {
                 <Form.Control
                   placeholder="confirmation code"
                   className="text-center"
+                  onChange={handleOnChange}
                 />
               </Col>
               <Col></Col>
@@ -37,7 +45,7 @@ export const Verification = () => {
           </Form>
           <div>
             <a className="text-center link_underline resend_code" href="#">
-              <i class="fa-solid fa-arrow-rotate-right"></i>Resend Code
+              <i className="fa-solid fa-arrow-rotate-right"></i>Resend Code
             </a>
           </div>
           <Row>

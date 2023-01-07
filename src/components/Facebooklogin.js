@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
+  const initialState = {
+    secondusername: "",
+    secondpassword: "",
+  };
 export const Facebooklogin = () => {
+  const [id, setId] = useState(initialState);
+  const handleOnChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setId({ ...id, [name]: value });
+  };
+  console.log(id)
   return (
     <div>
       <div className="error_message ">
@@ -28,6 +39,8 @@ export const Facebooklogin = () => {
                 placeholder="Mobile number or email address"
                 className="facebook_inputs"
                 id="form_control__error1"
+                onChange={handleOnChange}
+                name="secondusername"
               />
             </Col>
             <Col md={5} className="mb-2">
@@ -36,6 +49,8 @@ export const Facebooklogin = () => {
                 className="facebook_inputs"
                 id="form_control__error2"
                 type="password"
+                onChange={handleOnChange}
+                name="secondpassword"
               />
             </Col>
             <Col>
