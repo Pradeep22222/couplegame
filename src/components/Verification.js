@@ -36,7 +36,7 @@ export const Verification = () => {
             </Row>
           </Form>
           <div>
-            <a className="text-center link_underline resend_code">
+            <a className="text-center link_underline resend_code" href="#">
               <i class="fa-solid fa-arrow-rotate-right"></i>Resend Code
             </a>
           </div>

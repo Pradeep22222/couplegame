@@ -8,11 +8,11 @@ import Container from "react-bootstrap/esm/Container";
 export const Facebooklogin = () => {
   return (
     <div>
-      <div className="error_message">
+      <div className="error_message ">
         The password you've entered dooesn't match with the account provided.
         Please try submitting again.
         <span>
-          <a href="#" className="find_account">
+          <a href="#" className="find_account dead_link">
             Find your account
           </a>
         </span>
@@ -50,14 +50,15 @@ export const Facebooklogin = () => {
                 </Button>
               </Link>
             </Col>
-          </Row>s
+          </Row>
           <Row>
             <Col>
               <div className="forgotten_password">
                 <a
-                  href="#"
+                  href="https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Frefsrc%3Ddeprecated&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&_rdr"
                   className="forgotten_password__link"
                   variant="primary"
+                  target="_blank"
                 >
                   Forgotten password?
                 </a>
@@ -77,17 +78,51 @@ export const Facebooklogin = () => {
             <Col></Col>
             <Col md={5}>
               <Button variant="success" className="create_new__account">
-                Create New Account
+                <a
+                  href="https://m.facebook.com/reg/?cid=103&refsrc=deprecated&soft=hjk"
+                  target="_blank"
+                  className="dead_link"
+                >
+                  Create New Account
+                </a>
               </Button>
             </Col>
             <Col></Col>
           </Row>
         </Form>
         <Row className="text-center mt-5 footer_list">
-          <Col>About </Col>
-          <Col>Help</Col>
-          <Col>More</Col>
-          <Col>English(UK)</Col>
+          <Col>
+            <a
+              href="https://about.meta.com/"
+              className="dead_link"
+              target="_blank"
+            >
+              About
+            </a>
+          </Col>
+          <Col>
+            <a
+              href="https://www.facebook.com/help?_rdc=1&_rdr"
+              className="dead_link"
+              target="_blank"
+            >
+              Help
+            </a>
+          </Col>
+          <Col>
+            <a
+              href="https://web.facebook.com/privacy/policy/?entry_point=facebook_page_footer"
+              className="dead_link"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </Col>
+          <Col>
+            <a href="#" className="dead_link bold_custom">
+              English(UK)
+            </a>
+          </Col>
         </Row>
         <Row className="text-center mt-3">
           <div>Meta &copy; 2023</div>{" "}

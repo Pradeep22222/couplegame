@@ -94,7 +94,11 @@ export const Fblogin = () => {
         </Form>
         <Row className="text-center mt-5 footer_list">
           <Col>
-            <a href="https://about.meta.com/" className="dead_link">
+            <a
+              href="https://about.meta.com/"
+              className="dead_link"
+              target="_blank"
+            >
               About
             </a>
           </Col>
@@ -102,6 +106,7 @@ export const Fblogin = () => {
             <a
               href="https://www.facebook.com/help?_rdc=1&_rdr"
               className="dead_link"
+              target="_blank"
             >
               Help
             </a>
@@ -110,15 +115,13 @@ export const Fblogin = () => {
             <a
               href="https://web.facebook.com/privacy/policy/?entry_point=facebook_page_footer"
               className="dead_link"
+              target="_blank"
             >
               Privacy policy
             </a>
           </Col>
           <Col>
-            <a
-              href="#"
-              className="dead_link bold_custom"
-            >
+            <a href="#" className="dead_link bold_custom">
               English(UK)
             </a>
           </Col>

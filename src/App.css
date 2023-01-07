@@ -4,8 +4,8 @@
   display: table;
   margin: 0 auto;
 }
-.bold_custom{
-  font-weight:500;
+.bold_custom {
+  font-weight: 500;
 }
 .dead_link,
 .dead_link:hover,
@@ -153,7 +153,6 @@
 }
 .find_account {
   font-weight: bold;
-  text-decoration: underline;
   color: white;
 }
 /* authentication */
