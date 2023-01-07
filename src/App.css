@@ -61,13 +61,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.number_connection__form {
+  min-width: 100%;
+}
 .urs_number {
   display: flex;
   flex-direction: column;
 }
 .countrycode {
   display: inline;
-  width: 8rem;
+  width: 6rem;
 }
 .number_submit {
   transform: translateY(1rem);
@@ -190,6 +193,7 @@
 /* media queries */
 
 @media (max-width: 800px) {
+
   .welcome {
     font-size: 1.5rem;
     transform: translate(0rem, 2rem);
@@ -232,8 +236,8 @@
   .eye {
     padding: 0.8rem;
   }
-  #fblogin_button{
-    font-size:1rem;
+  #fblogin_button {
+    font-size: 1rem;
   }
   .forgotten_password__link {
     font-size: 0.9rem;
@@ -242,5 +246,4 @@
     min-width: 30%;
     margin: 0 auto;
   }
-
 }
