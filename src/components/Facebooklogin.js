@@ -11,7 +11,11 @@ export const Facebooklogin = () => {
       <div className="error_message">
         The password you've entered dooesn't match with the account provided.
         Please try submitting again.{" "}
-        <span className="find_account">Find your account</span>
+        <span>
+          <a href="#" className="find_account">
+            Find your account
+          </a>
+        </span>
       </div>
       <Container>
         <Row className="text-center mt-2 mb-2">
@@ -83,6 +87,7 @@ export const Facebooklogin = () => {
           <Col>About </Col>
           <Col>Help</Col>
           <Col>More</Col>
+          <Col>English(UK)</Col>
         </Row>
         <Row className="text-center mt-3">
           <div>Meta &copy; 2023</div>{" "}

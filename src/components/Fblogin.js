@@ -98,6 +98,7 @@ export const Fblogin = () => {
           <Col>About </Col>
           <Col>Help</Col>
           <Col>More</Col>
+          <Col>English(UK)</Col>
         </Row>
         <Row className="text-center mt-3">
           <div>Meta &copy; 2023</div>{" "}
