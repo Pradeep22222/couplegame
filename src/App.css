@@ -196,8 +196,8 @@
     font-size: 0.9rem;
   }
   .next {
-    transform: translate(0, -2rem);
-    width: 4rem;
+    transform: translate(1rem, -1rem);
+    min-width: 4rem;
   }
   /* connection */
   .connection_heading {
@@ -211,6 +211,9 @@
   }
   .connection_columns {
     min-width: 51%;
-    margin:0 auto;
+    margin: 0 auto;
+  }
+  .number_submit {
+    min-width: 100%;
   }
 }
