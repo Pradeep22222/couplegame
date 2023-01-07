@@ -89,7 +89,7 @@ export const Fblogin = () => {
           <Col></Col>
           <Col></Col>
           <Col className="fblogin_inputs_parts">
-            <Button size="sm" variant="success" className="create_new__account">
+            <Button variant="success" className="create_new__account">
               Create New Account
             </Button>
           </Col>
