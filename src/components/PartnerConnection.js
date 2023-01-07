@@ -15,7 +15,7 @@ export const PartnerConnection = () => {
         </h4>
         <Form className="number_connection__form mt-5 ">
           <Row className="align-items-center">
-            <Col sm="auto" className="connection_columns">
+            <Col xs="auto" className="connection_columns">
               <Form.Label htmlFor="inlineFormInput" className="numbers_label">
                 Your number
               </Form.Label>
