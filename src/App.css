@@ -187,16 +187,30 @@
 }
 /* media queries */
 
-@media (max-width:800px){
-  .welcome{
-    font-size:1.5rem;
-    transform:translate(0rem,2rem)
+@media (max-width: 800px) {
+  .welcome {
+    font-size: 1.5rem;
+    transform: translate(0rem, 2rem);
   }
-  .home_list{
-    font-size:.9rem;
+  .home_list {
+    font-size: 0.9rem;
   }
-  .next{
-   transform:translate(0, -2rem);
-   width:4rem;
+  .next {
+    transform: translate(0, -2rem);
+    width: 4rem;
+  }
+  /* connection */
+  .connection_heading {
+    font-size: 1.2rem;
+  }
+  .numbers_label {
+    font-size: 1rem;
+  }
+  .connection_content {
+    min-width: 100%;
+  }
+  .connection_columns {
+    min-width: 51%;
+    margin:0 auto;
   }
 }

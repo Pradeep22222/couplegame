@@ -10,19 +10,23 @@ export const PartnerConnection = () => {
   return (
     <div className="connection">
       <div className="connection_content">
-        {" "}
-        <h3 className="text-center pt-5">
+        <h4 className="text-center pt-5 connection_heading">
           Connect to you partner through current operating mobile numbers
-        </h3>
+        </h4>
         <Form className="number_connection__form mt-5 ">
           <Row className="align-items-center">
-            <Col xs="auto">
+            <Col sm="auto" className="connection_columns">
               <Form.Label htmlFor="inlineFormInput" className="numbers_label">
                 Your number
               </Form.Label>
               <InputGroup className="mb-2">
                 <InputGroup.Text>
-                  <select name="countryCode" id="" className="countrycode" required>
+                  <select
+                    name="countryCode"
+                    id=""
+                    className="countrycode"
+                    required
+                  >
                     <option data-countryCode="GB" value="44" Selected>
                       UK (+44)
                     </option>
@@ -679,10 +683,11 @@ export const PartnerConnection = () => {
                   id="inlineFormInputGroup"
                   placeholder="12345678.."
                   required
+                  className="number_connection__input"
                 />
               </InputGroup>
             </Col>
-            <Col xs="auto">
+            <Col xs="auto" className="connection_columns">
               <Form.Label
                 htmlFor="inlineFormInputGroup"
                 className="numbers_label"
@@ -691,7 +696,12 @@ export const PartnerConnection = () => {
               </Form.Label>
               <InputGroup className="mb-2">
                 <InputGroup.Text>
-                  <select name="countryCode" id="" className="countrycode" required>
+                  <select
+                    name="countryCode"
+                    id=""
+                    className="countrycode"
+                    required
+                  >
                     <option data-countryCode="GB" value="44" Selected>
                       UK (+44)
                     </option>
@@ -1352,7 +1362,7 @@ export const PartnerConnection = () => {
               </InputGroup>
             </Col>
 
-            <Col xs="auto">
+            <Col xs="auto" className="connection_columns">
               <Link to="login">
                 <Button
                   type="submit"
