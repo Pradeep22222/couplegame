@@ -196,7 +196,7 @@
     font-size: 0.9rem;
   }
   .next {
-    transform: translate(1rem, -1rem);
+    transform: translate(-8rem, -1rem);
     min-width: 4rem;
   }
   /* connection */
@@ -216,4 +216,5 @@
   .number_submit {
     min-width: 100%;
   }
+  /* fb login */
 }
