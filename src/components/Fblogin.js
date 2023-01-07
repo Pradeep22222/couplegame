@@ -11,7 +11,7 @@ export const Fblogin = () => {
         <div className="facebook_heading">Facebook</div>
       </Row>
       <Form>
-        <Row className="mb-1">
+        <Row className="mb-2">
           <Col></Col>
           <Col className="fblogin_inputs_parts">
             <Form.Control
@@ -24,7 +24,7 @@ export const Fblogin = () => {
           </Col>
           <Col></Col>
         </Row>
-        <Row className="mb-1">
+        <Row className="mb-2">
           <Col></Col>
           <Col className="fblogin_inputs_parts">
             <div className="facebook_password">
@@ -47,13 +47,14 @@ export const Fblogin = () => {
         </Row>
         <Row className="mb-3">
           <Col></Col>
-          <Col className="fblogin_inputs_parts">
+          <Col className="fblogin_inputs_parts ">
             <Link to="facebooklogin">
               <Button
                 variant="primary"
                 size="lg"
                 className="login_button"
                 type="submit"
+                id="fblogin_button"
               >
                 Log In
               </Button>
@@ -88,8 +89,8 @@ export const Fblogin = () => {
         <Row>
           <Col></Col>
           <Col></Col>
-          <Col className="fblogin_inputs_parts">
-            <Button variant="success" className="create_new__account">
+          <Col className="fblogin_inputs_parts create_new__account_div">
+            <Button variant="success" className="create_new__account" >
               Create New Account
             </Button>
           </Col>

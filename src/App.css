@@ -227,11 +227,20 @@
   }
   .fblogin_inputs_parts {
     min-width: 90%;
+    margin: 0 auto;
   }
-  .create_new__account {
-    min-width: 70%;
+  .eye {
+    padding: 0.8rem;
   }
-  .forgotten_password {
-    font-size: 0.8rem;
+  #fblogin_button{
+    font-size:1rem;
   }
+  .forgotten_password__link {
+    font-size: 0.9rem;
+  }
+  .create_new__account_div {
+    min-width: 30%;
+    margin: 0 auto;
+  }
+
 }
