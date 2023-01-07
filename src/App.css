@@ -198,7 +198,7 @@
     font-size: 0.9rem;
   }
   .next {
-    transform: translate(-8rem, -1rem);
+    transform: translate(-6rem, -1rem);
     min-width: 4rem;
   }
   /* connection */

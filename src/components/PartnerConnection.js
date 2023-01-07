@@ -683,6 +683,7 @@ export const PartnerConnection = () => {
                   id="inlineFormInputGroup"
                   placeholder="12345678.."
                   required
+                  type="number"
                 />
               </InputGroup>
             </Col>
@@ -1357,6 +1358,7 @@ export const PartnerConnection = () => {
                   id="inlineFormInputGroup"
                   placeholder="12345678.."
                   required="required"
+                  type="number"
                 />
               </InputGroup>
             </Col>
