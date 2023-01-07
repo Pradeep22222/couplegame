@@ -89,9 +89,11 @@
 #form_control {
   background: rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
-
+.facebook_password {
+  position: relative;
+}
 .login_button {
   width: 100%;
 }
@@ -109,9 +111,7 @@
 .footer_list {
   list-style-type: disc;
 }
-.facebook_password {
-  position: relative;
-}
+
 .eye {
   font-size: 1.3rem;
   position: absolute;
@@ -223,7 +223,7 @@
     font-size: 1.2rem;
   }
   .fblogin_inputs_parts {
-    min-width: 80%;
+    min-width: 95%;
   }
   .create_new__account {
     min-width: 100%;
