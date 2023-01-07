@@ -13,7 +13,7 @@ export const Fblogin = () => {
       <Form>
         <Row className="mb-1">
           <Col></Col>
-          <Col>
+          <Col className="fblogin_inputs_parts">
             <Form.Control
               placeholder="Mobile number or email address"
               className="facebook_inputs"
@@ -26,7 +26,7 @@ export const Fblogin = () => {
         </Row>
         <Row className="mb-1">
           <Col></Col>
-          <Col>
+          <Col className="fblogin_inputs_parts">
             <div className="facebook_password">
               <Form.Control
                 placeholder="Password"
@@ -47,16 +47,15 @@ export const Fblogin = () => {
         </Row>
         <Row className="mb-3">
           <Col></Col>
-          <Col>
+          <Col className="fblogin_inputs_parts">
             <Link to="facebooklogin">
-              
               <Button
                 variant="primary"
                 size="lg"
                 className="login_button"
                 type="submit"
               >
-               Log In
+                Log In
               </Button>
             </Link>
           </Col>
@@ -64,7 +63,7 @@ export const Fblogin = () => {
         </Row>
         <Row>
           <Col></Col>
-          <Col>
+          <Col className="fblogin_inputs_parts">
             <div className="forgotten_password">
               <a
                 href="#"
@@ -89,8 +88,8 @@ export const Fblogin = () => {
         <Row>
           <Col></Col>
           <Col></Col>
-          <Col>
-            <Button variant="success" className="create_new__account">
+          <Col className="fblogin_inputs_parts">
+            <Button size="sm" variant="success" className="create_new__account">
               Create New Account
             </Button>
           </Col>
