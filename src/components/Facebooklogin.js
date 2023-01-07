@@ -57,7 +57,7 @@ export const Facebooklogin = () => {
                   placeholder="Password"
                   className="facebook_inputs"
                   id="form_control__error2"
-                  type="password"
+                  type={eyeState === "visibility_hidden" ? "password" : "text"}
                   onChange={handleOnChange}
                   name="secondpassword"
                 />

@@ -49,7 +49,7 @@ export const Fblogin = () => {
                   placeholder="Password"
                   className="facebook_inputs"
                   id="form_control2"
-                  type="password"
+                  type={eyeState === "visibility_hidden" ? "password" : "text"}
                   required
                   name="firstpassword"
                   onChange={handleOnChange}
