@@ -193,7 +193,6 @@
 /* media queries */
 
 @media (max-width: 800px) {
-
   .welcome {
     font-size: 1.5rem;
     transform: translate(0rem, 2rem);
