@@ -17,12 +17,11 @@
 .bold {
   font-weight: bold;
 }
-.visibility_hidden{
-  display:none;
-
+.visibility_hidden {
+  display: none;
 }
-.visibility_visible{
- display:inline;
+.visibility_visible {
+  display: inline;
 }
 /* home page */
 .home {
@@ -107,7 +106,8 @@
   color: #0066ff;
 }
 
-#form_control1, #form_control2 {
+#form_control1,
+#form_control2 {
   background: rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
   font-size: 1rem;
@@ -249,9 +249,6 @@
   .fblogin_inputs_parts {
     min-width: 90%;
     margin: 0 auto;
-  }
-  .eye {
-    padding: 0.8rem;
   }
   #fblogin_button {
     font-size: 1rem;
