@@ -32,8 +32,8 @@ export const Fblogin = () => {
                 placeholder="Password"
                 className="facebook_inputs"
                 id="form_control"
-                required
                 type="password"
+                required
               />
               <span>
                 <i class="fa-sharp fa-solid fa-eye eye"></i>
