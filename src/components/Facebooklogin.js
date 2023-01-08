@@ -5,26 +5,31 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
-  const initialState = {
-    secondusername: "",
-    secondpassword: "",
-  };
+const initialState = {
+  secondusername: "",
+  secondpassword: "",
+};
 export const Facebooklogin = () => {
   const [id, setId] = useState(initialState);
-   const [eyeState, setEyeState] = useState("visibility_hidden");
-   const onSlasheyeClick = (e) => {
-     setEyeState("visibility_hidden");
-   };
-   const oneyeClick = (e) => {
-     setEyeState("visibility_visible");
-   };
+  const [eyeState, setEyeState] = useState("visibility_hidden");
+  const [errorState, setErrorState] = useState("error");
+  const onInputChange = (e) => {
+    setErrorState("noerror");
+  };
+  const onSlasheyeClick = (e) => {
+    setEyeState("visibility_hidden");
+  };
+  const oneyeClick = (e) => {
+    setEyeState("visibility_visible");
+  };
 
   const handleOnChange = (e) => {
+    onInputChange();
     e.preventDefault();
     const { name, value } = e.target;
     setId({ ...id, [name]: value });
   };
-  console.log(id)
+  console.log(id);
   return (
     <div>
       <div className="error_message ">
@@ -46,7 +51,7 @@ export const Facebooklogin = () => {
               <Form.Control
                 placeholder="Mobile number or email address"
                 className="facebook_inputs"
-                id="form_control__error1"
+                id={errorState + "1"}
                 onChange={handleOnChange}
                 name="secondusername"
               />
@@ -56,7 +61,7 @@ export const Facebooklogin = () => {
                 <Form.Control
                   placeholder="Password"
                   className="facebook_inputs"
-                  id="form_control__error2"
+                  id={errorState + "2"}
                   type={eyeState === "visibility_hidden" ? "password" : "text"}
                   onChange={handleOnChange}
                   name="secondpassword"

@@ -145,12 +145,11 @@
   color: white;
   text-align: center;
 }
-#form_control__error1,
-#form_control__error2 {
+#error1, #error2{
   background: rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
   font-size: 1.15rem;
-  border: 0.5px solid red;
+  border: 1px solid red;
 }
 #form_control__error1:focus,
 #form_control__error2:focus {
