@@ -129,9 +129,6 @@
   min-width: 100%;
   font-size: 0.5rem;
 }
-.footer_list {
-  list-style-type: disc;
-}
 
 .eye {
   font-size: 1.3rem;
@@ -153,7 +150,7 @@
   background: rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
   font-size: 1.15rem;
-  outline: 0.5px solid red;
+  border: 0.5px solid red;
 }
 #form_control__error1:focus,
 #form_control__error2:focus {
@@ -259,6 +256,10 @@
   .create_new__account_div {
     min-width: 30%;
     margin: 0 auto;
+  }
+  .footer_list {
+    text-align: center;
+    font-size: 0.8rem;
   }
   /* error page */
   .error_message {
