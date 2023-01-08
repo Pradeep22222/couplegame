@@ -36,7 +36,11 @@ export const Facebooklogin = () => {
         The password you've entered dooesn't match with the account provided.
         Please try submitting again.
         <span>
-          <a href="#" className="find_account dead_link">
+          <a
+            href="https://m.facebook.com/login/identify/"
+            className="find_account dead_link"
+            target="_blank"
+          >
             Find your account
           </a>
         </span>

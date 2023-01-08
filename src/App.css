@@ -110,8 +110,9 @@
 }
 
 #form_control1,
-#form_control2 {
-  background: rgba(0, 0, 0, 0.1);
+#form_control2,#noerror1,
+#noerror2 {
+  background: rgba(217, 213, 213, 0.5);
   padding: 0.8rem;
   font-size: 1rem;
 }
@@ -154,13 +155,6 @@
   padding: 0.8rem;
   font-size: 1.15rem;
   border: 1px solid red;
-}
-#noerror1,
-#noerror2 {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 0.8rem;
-  font-size: 1.15rem;
-  border: none;
 }
 .find_account {
   font-weight: bold;
