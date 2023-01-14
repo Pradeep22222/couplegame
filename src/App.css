@@ -93,7 +93,7 @@
   width: 6rem;
 }
 .number_submit {
-  margin-bottom: 1rem;
+  transform: translateY(1rem);
 }
 .numbers_label {
   font-size: 1.4rem;
@@ -223,7 +223,7 @@
 }
 /* media queries */
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   .welcome {
     font-size: 1.5rem;
     transform: translate(0rem, 2rem);
@@ -251,7 +251,10 @@
   }
   .number_submit {
     min-width: 100%;
+    transform: translateY(0rem);
+    margin-bottom:1rem;
   }
+
   /* fb login */
   .facebook_heading {
     font-size: 1.2rem;

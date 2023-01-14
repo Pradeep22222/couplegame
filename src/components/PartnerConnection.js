@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -10,13 +9,22 @@ import { Link } from "react-router-dom";
 const initialState = { urNum: "", partNum: "" };
 export const PartnerConnection = () => {
   const [num, setNum] = useState(initialState);
+  const [connect, setConnect] = useState("connect");
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
   };
   const handleOnSubmit = (e) => {};
-
-  console.log(num);
+  const connectionestablishment = (e) => {
+    setConnect("Connection Established");
+    alert("Connection established between numbers");
+  };
+  const handleOnConnectClick = (e) => {
+    setConnect("Establishing Connection...");
+    window.setTimeout(() => {
+      connectionestablishment();
+    }, 5000);
+  };
 
   return (
     <div className="connection">
@@ -29,7 +37,7 @@ export const PartnerConnection = () => {
             className="number_connection__form mt-5"
             onSubmit={handleOnSubmit}
           >
-            <Row className="align-items-center">
+            <Row className="d-flex align-items-center">
               <Col className="connection_columns" lg={5}>
                 <Form.Label htmlFor="inlineFormInput" className="numbers_label">
                   Your number
@@ -1385,39 +1393,42 @@ export const PartnerConnection = () => {
               </Col>
 
               <Col lg={2} className="connection_columns">
-                <Link to="login">
+                <Link>
                   <Button
                     type="submit"
                     className="number_submit"
                     variant="success"
+                    onClick={handleOnConnectClick}
                   >
-                    Connect
+                    {connect}
                   </Button>
                 </Link>
               </Col>
             </Row>
             <Row className="text-center">
-              <Col lg={12} className="mb-2">
+              <Col xlg={6} lg={12} className="mb-2">
                 <div className="facebook_icon__div login_div">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    className="connection_login__button"
-                  >
-                    <i className="fa-brands fa-facebook-f connection_icon"></i>
-                    Login with Facebook
-                  </Button>
+                  <Link to="login">
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="connection_login__button"
+                    >
+                      <i className="fa-brands fa-facebook-f connection_icon"></i>
+                      Login with Facebook
+                    </Button>
+                  </Link>
                 </div>
               </Col>
-              <Col lg={12} className="mb-2">
+              <Col xlg={6} lg={12} className="mb-2">
                 <div className="gamil_icon__div login_div login_div_gmail">
                   <Button
                     size="lg"
                     className="connection_login__button connection_login__button_gmail"
                     variant="danger"
                   >
-                    <i className="fa-brands fa-google connection_icon"></i> Create
-                    Account with Gmail
+                    <i className="fa-brands fa-google connection_icon"></i>{" "}
+                    Create Account with Gmail
                   </Button>
                 </div>
               </Col>
