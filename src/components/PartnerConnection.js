@@ -10,8 +10,6 @@ const initialState = { urNum: "", partNum: "" };
 export const PartnerConnection = () => {
   const [num, setNum] = useState(initialState);
   const [connect, setConnect] = useState("Connect");
-  const [connectVisibility, setConnectVisibility] =
-    useState("text-center hidden");
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
@@ -20,10 +18,9 @@ export const PartnerConnection = () => {
   const connectionestablishment = (e) => {
     setConnect("Connection Established");
     alert("Connection established between numbers");
+    alert("Try logging in now");
   };
-  if (connect === "Connection established between numbers") {
-    setConnectVisibility("text-center visible");
-  }
+
   const handleOnConnectClick = (e) => {
     setConnect("Establishing Connection...");
     window.setTimeout(() => {
@@ -1403,41 +1400,32 @@ export const PartnerConnection = () => {
                     type="submit"
                     className="number_submit"
                     variant="success"
-                    onClick={handleOnConnectClick}
+                    onClick={() => {
+                      handleOnConnectClick();
+                    }}
                   >
                     {connect}
                   </Button>
                 </Link>
               </Col>
             </Row>
-            <Row className={connectVisibility}>
-              <Col xlg={6} lg={12} className="mb-2">
-                <div className="facebook_icon__div login_div">
-                  <Link to="login">
-                    <Button
-                      variant="primary"
-                      size="lg"
-                      className="connection_login__button"
-                    >
-                      <i className="fa-brands fa-facebook-f connection_icon"></i>
-                      Login with Facebook
-                    </Button>
-                  </Link>
-                </div>
-              </Col>
-              <Col xlg={6} lg={12} className="mb-2">
-                <div className="gamil_icon__div login_div login_div_gmail">
-                  <Button
-                    size="lg"
-                    className="connection_login__button connection_login__button_gmail"
-                    variant="danger"
-                  >
-                    <i className="fa-brands fa-google connection_icon"></i>{" "}
-                    Create Account with Gmail
-                  </Button>
-                </div>
-              </Col>
-            </Row>
+            {connect !== "Connection Established" || (
+              <Row className="text-center">
+                <Col xlg={6} lg={12} className="mb-2">
+                  <div className="facebook_icon__div login_div">
+                    <Link to="login">
+                      <Button
+                        variant="primary"
+                        size="lg"
+                        className="connection_login__button"
+                      >
+                        Next
+                      </Button>
+                    </Link>
+                  </div>
+                </Col>
+              </Row>
+            )}
           </Form>
         </Container>
       </div>

@@ -26,11 +26,11 @@
 .visibility_visible {
   display: inline;
 }
-.hidden{
-  opacity:0;
+.hidden {
+  visibility: hidden;
 }
-.visible{
-  opacity:1;
+.visible {
+  visibility: visible;
 }
 /* home page */
 .home {
@@ -38,7 +38,8 @@
   min-height: 100vh;
   position: relative;
 }
-.home_content {
+.home_content,
+.centering {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -106,16 +107,9 @@
   font-weight: 500;
   transform: translateX(30%);
 }
-.login_div {
-  width: 100%;
-}
-.login_div_gmail {
-  color: rgb(249, 111, 42);
-}
+
 .connection_login__button {
   width: 100%;
-  position: relative;
-  font-size: 0.8rem;
 }
 
 .connection_icon {
@@ -258,7 +252,7 @@
   .number_submit {
     min-width: 100%;
     transform: translateY(0rem);
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
   }
 
   /* fb login */
