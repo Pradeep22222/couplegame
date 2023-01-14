@@ -26,6 +26,12 @@
 .visibility_visible {
   display: inline;
 }
+.hidden{
+  opacity:0;
+}
+.visible{
+  opacity:1;
+}
 /* home page */
 .home {
   background-color: rgba(249, 88, 115, 0.5);

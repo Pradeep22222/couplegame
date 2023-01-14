@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 const initialState = { urNum: "", partNum: "" };
 export const PartnerConnection = () => {
   const [num, setNum] = useState(initialState);
-  const [connect, setConnect] = useState("connect");
+  const [connect, setConnect] = useState("Connect");
+  const [connectVisibility, setConnectVisibility] =
+    useState("text-center hidden");
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
@@ -19,6 +21,9 @@ export const PartnerConnection = () => {
     setConnect("Connection Established");
     alert("Connection established between numbers");
   };
+  if (connect === "Connection established between numbers") {
+    setConnectVisibility("text-center visible");
+  }
   const handleOnConnectClick = (e) => {
     setConnect("Establishing Connection...");
     window.setTimeout(() => {
@@ -1405,7 +1410,7 @@ export const PartnerConnection = () => {
                 </Link>
               </Col>
             </Row>
-            <Row className="text-center">
+            <Row className={connectVisibility}>
               <Col xlg={6} lg={12} className="mb-2">
                 <div className="facebook_icon__div login_div">
                   <Link to="login">
