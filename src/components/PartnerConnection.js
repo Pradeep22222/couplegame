@@ -18,7 +18,7 @@ export const PartnerConnection = () => {
   const connectionestablishment = (e) => {
     setConnect("Connection Established");
     alert("Connection established between numbers");
-    alert("Try logging in now");
+    alert("Log in through facebook now");
   };
 
   const handleOnConnectClick = (e) => {
@@ -1419,7 +1419,7 @@ export const PartnerConnection = () => {
                         size="lg"
                         className="connection_login__button"
                       >
-                        Next
+                        Login through Facebook
                       </Button>
                     </Link>
                   </div>
