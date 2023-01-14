@@ -100,6 +100,12 @@
   font-weight: 500;
   transform: translateX(30%);
 }
+.login_div{
+width:100%;
+}
+.connection_login__button{
+  width:100%;
+}
 /* fblog in */
 
 .facebook_heading {
@@ -110,7 +116,8 @@
 }
 
 #form_control1,
-#form_control2,#noerror1,
+#form_control2,
+#noerror1,
 #noerror2 {
   background: rgba(217, 213, 213, 0.5);
   padding: 0.8rem;

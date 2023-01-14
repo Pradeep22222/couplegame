@@ -14,10 +14,9 @@ export const PartnerConnection = () => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
   };
- const  handleOnSubmit = (e) => {
-  };
+  const handleOnSubmit = (e) => {};
 
-    console.log(num);
+  console.log(num);
 
   return (
     <div className="connection">
@@ -26,7 +25,10 @@ export const PartnerConnection = () => {
           Connect to you partner through current operating mobile numbers
         </h4>
         <Container>
-          <Form className="number_connection__form mt-5" onSubmit={handleOnSubmit}>
+          <Form
+            className="number_connection__form mt-5"
+            onSubmit={handleOnSubmit}
+          >
             <Row className="align-items-center">
               <Col className="connection_columns" lg={5}>
                 <Form.Label htmlFor="inlineFormInput" className="numbers_label">
@@ -1389,9 +1391,33 @@ export const PartnerConnection = () => {
                     className="number_submit"
                     variant="success"
                   >
-                    Next
+                    Connect
                   </Button>
                 </Link>
+              </Col>
+            </Row>
+            <Row className="text-center">
+              <Col lg={6} className="mb-2">
+                <div className="facebook_icon__div login_div">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="connection_login__button"
+                  >
+                    Login with Facebook
+                  </Button>
+                </div>
+              </Col>
+              <Col lg={6} className="mb-2">
+                <div className="gamil_icon__div login_div">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="connection_login__button"
+                  >
+                    Create Account with Gmail
+                  </Button>
+                </div>
               </Col>
             </Row>
           </Form>
