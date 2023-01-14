@@ -1397,25 +1397,27 @@ export const PartnerConnection = () => {
               </Col>
             </Row>
             <Row className="text-center">
-              <Col lg={6} className="mb-2">
+              <Col lg={12} className="mb-2">
                 <div className="facebook_icon__div login_div">
                   <Button
                     variant="primary"
                     size="lg"
                     className="connection_login__button"
                   >
+                    <i className="fa-brands fa-facebook-f connection_icon"></i>
                     Login with Facebook
                   </Button>
                 </div>
               </Col>
-              <Col lg={6} className="mb-2">
-                <div className="gamil_icon__div login_div">
+              <Col lg={12} className="mb-2">
+                <div className="gamil_icon__div login_div login_div_gmail">
                   <Button
-                    variant="primary"
                     size="lg"
-                    className="connection_login__button"
+                    className="connection_login__button connection_login__button_gmail"
+                    variant="danger"
                   >
-                    Create Account with Gmail
+                    <i className="fa-brands fa-google connection_icon"></i> Create
+                    Account with Gmail
                   </Button>
                 </div>
               </Col>

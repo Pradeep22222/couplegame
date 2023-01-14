@@ -93,18 +93,27 @@
   width: 6rem;
 }
 .number_submit {
-  transform: translateY(1rem);
+  margin-bottom: 1rem;
 }
 .numbers_label {
   font-size: 1.4rem;
   font-weight: 500;
   transform: translateX(30%);
 }
-.login_div{
-width:100%;
+.login_div {
+  width: 100%;
 }
-.connection_login__button{
-  width:100%;
+.login_div_gmail {
+  color: rgb(249, 111, 42);
+}
+.connection_login__button {
+  width: 100%;
+  position: relative;
+  font-size: 0.8rem;
+}
+
+.connection_icon {
+  margin-right: 0.5rem;
 }
 /* fblog in */
 
