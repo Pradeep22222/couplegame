@@ -23,8 +23,8 @@ export const PartnerConnection = () => {
 
   const connectionestablishment = (e) => {
     setConnect("Connection Established");
-    alert("Connection established between numbers");
-    alert("Login through facebook now");
+    alert("Connection established between provided numbers");
+    alert("Login through facebook on next step");
   };
 
   // const handleOnConnectClick = (e) => {};
@@ -48,7 +48,7 @@ export const PartnerConnection = () => {
     <div className="connection">
       <div className="connection_content">
         <h4 className="text-center pt-5 connection_heading">
-          Connect to you partner through current operating mobile numbers
+          Connect to your partner through current operating mobile numbers
         </h4>
         <h6 className="mx-3">User note: Please try connecting together</h6>
         <Container>
@@ -744,7 +744,7 @@ export const PartnerConnection = () => {
                   htmlFor="inlineFormInputGroup"
                   className="numbers_label"
                 >
-                  Partners number
+                  Partner's number
                 </Form.Label>
                 <InputGroup className="mb-2">
                   <InputGroup.Text>
