@@ -13,7 +13,10 @@ export const Verification = () => {
     const { value } = e.target;
     setCode(value);
   };
-  console.log(code);
+  const pageReload = (e) => {
+    e.preventDefault();
+    window.location.reload();
+  };
   return (
     <div>
       <div className="authentication_page">
@@ -45,7 +48,11 @@ export const Verification = () => {
             </Row>
           </Form>
           <div>
-            <a className="text-center link_underline resend_code" href="#">
+            <a
+              className="text-center link_underline resend_code"
+              href=""
+              onClick={pageReload}
+            >
               <i className="fa-solid fa-arrow-rotate-right"></i>Resend Code
             </a>
           </div>

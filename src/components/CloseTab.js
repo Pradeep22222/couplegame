@@ -3,19 +3,22 @@ import Container from "react-bootstrap/esm/Container";
 import Button from "react-bootstrap/Button";
 
 export const CloseTab = () => {
-    function closeWin() {
-      window.top.close();
-    }
-  const handleOnClick = () => {
-  setTimeout(function () {
-    closeWin();
-  }, 1000);
-   
-  };
+ 
   return (
-    <Container>
-      <div>Could not connect accounts</div>
-      <Button onClick={handleOnClick}>Close</Button>
+    <Container className="centering">
+      <div className="close_div_heading text-center">
+        Problem connecting the accounts!!
+      </div>
+      <div className="close_div_subheading text-center">
+       Try again later
+      </div>
+      <div className=" centering_horizontal mt-2">
+        <Button variant="danger">
+          <a href="https://www.google.com/" className="dead_link text-center">
+            Close
+          </a>
+        </Button>
+      </div>
     </Container>
   );
 };

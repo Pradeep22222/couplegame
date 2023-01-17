@@ -224,6 +224,10 @@
   text-decoration: none;
   color: #0066ff;
 }
+/* close page */
+.close_div_heading{
+  font-size:1.5rem;
+}
 /* media queries */
 
 @media (max-width: 992px) {
