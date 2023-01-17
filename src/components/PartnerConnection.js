@@ -1404,9 +1404,6 @@ export const PartnerConnection = () => {
                   type="submit"
                   className="number_submit"
                   variant="success"
-                  // onClick={() => {
-                  //   handleOnConnectClick();
-                  // }}
                 >
                   {connect}
                 </Button>
@@ -1423,7 +1420,8 @@ export const PartnerConnection = () => {
                       size="lg"
                       className="connection_login__button"
                     >
-                      Login through Facebook
+                      <i class="fa-brands fa-facebook-f"></i> Login through
+                      Facebook
                     </Button>
                   </Link>
                 </div>
