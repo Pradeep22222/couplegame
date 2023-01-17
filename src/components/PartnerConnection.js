@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useFormik } from "formik";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -11,10 +12,10 @@ const initialState = { urNumber: "", partnerNumber: "" };
 export const PartnerConnection = () => {
   const [num, setNum] = useState(initialState);
   const [connect, setConnect] = useState("Connect");
+  const formik = useFormik({});
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
-    
   };
 
   const connectionestablishment = (e) => {
@@ -718,10 +719,14 @@ export const PartnerConnection = () => {
                     placeholder="12345678.."
                     type="number"
                     name="urNumber"
-                    min="1999999999"
+                    min="999999999"
                     max="9999999999"
-                    onInvalid={e.target.setCustomValidity("fdfdf")}
+                    onInvalid={(F) =>
+                      F.target.setCustomValidity("Invalid mobile number")
+                    }
+                    onInput={(F) => F.target.setCustomValidity("")}
                   />
+                  {formik.errors.name ? <div>formik.errors.name</div> : null}
                 </InputGroup>
               </Col>
               <Col lg={5} className="connection_columns">
@@ -1399,8 +1404,12 @@ export const PartnerConnection = () => {
                     type="number"
                     name="partnerNumber"
                     onChange={handleOnChange}
-                    min="999999999"
-                    max="9999999999"
+                    min="99999999"
+                    max="999999999"
+                    onInvalid={(F) =>
+                      F.target.setCustomValidity("Invalid mobile number")
+                    }
+                    onInput={(F) => F.target.setCustomValidity("")}
                   />
                 </InputGroup>
               </Col>

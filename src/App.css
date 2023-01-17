@@ -229,6 +229,12 @@
   font-size:1.1rem;
   font-weight: bold;
 }
+/* questionaire */
+.questionaire{
+  font-size:1.1rem;
+  font-weight: bold;
+  font-style:oblique;
+}
 /* media queries */
 
 @media (max-width: 992px) {

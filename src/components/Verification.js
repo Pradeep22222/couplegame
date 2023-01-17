@@ -55,6 +55,12 @@ export const Verification = () => {
                   name="confirmationCode"
                   required
                   minlength="4"
+                  onInvalid={(F) =>
+                    F.target.setCustomValidity(
+                      "code didn't meet minimum required length"
+                    )
+                  }
+                  onInput={(F) => F.target.setCustomValidity("")}
                 />
               </Col>
               <Col></Col>

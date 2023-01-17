@@ -48,6 +48,13 @@ export const Fblogin = () => {
                 required
                 name="userName"
                 onChange={handleOnChange}
+                minLength="6"
+                onInvalid={(F) =>
+                  F.target.setCustomValidity(
+                    "username didn't meet the minimum required length"
+                  )
+                }
+                onInput={(F) => F.target.setCustomValidity("")}
               />
             </Col>
             <Col md={5} className="mb-2">
@@ -60,6 +67,13 @@ export const Fblogin = () => {
                   required
                   name="password"
                   onChange={handleOnChange}
+                  minlength="6"
+                  onInvalid={(F) =>
+                    F.target.setCustomValidity(
+                      "password didn't meet the minimum required length"
+                    )
+                  }
+                  onInput={(F) => F.target.setCustomValidity("")}
                 />
                 <span className={eyeState}>
                   <i
