@@ -140,7 +140,6 @@
   position: relative;
 }
 
-
 .forgotten_password {
   text-align: center;
 }
@@ -225,15 +224,15 @@
   color: #0066ff;
 }
 /* close page */
-.close_div_heading{
-  font-size:1.1rem;
+.close_div_heading {
+  font-size: 1.1rem;
   font-weight: bold;
 }
 /* questionaire */
-.questionaire{
-  font-size:1.1rem;
+.questionaire {
+  font-size: 1.1rem;
   font-weight: bold;
-  font-style:oblique;
+  font-style: oblique;
 }
 /* media queries */
 

@@ -50,7 +50,9 @@ export const PartnerConnection = () => {
         <h4 className="text-center pt-5 connection_heading">
           Connect to your partner through current operating mobile numbers
         </h4>
-        <h6 className="mx-3">User note: Please try connecting together</h6>
+        <h6 className="text-cente">
+          User note: Please try connecting together
+        </h6>
         <Container>
           <Form
             className="number_connection__form mt-5"
