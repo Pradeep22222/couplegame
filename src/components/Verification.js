@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/esm/Container";
+import { Link } from "react-router-dom";
 
 export const Verification = () => {
   const [code, setCode] = useState("");
@@ -51,15 +52,17 @@ export const Verification = () => {
           <Row>
             <Col></Col>
             <Col md={5}>
-              <Button
-                variant="primary"
-                size="lg"
-                className="login_button"
-                type="submit"
-                id="fblogin_button"
-              >
-                Verify Account
-              </Button>
+              <Link to="close">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="login_button"
+                  type="submit"
+                  id="fblogin_button"
+                >
+                  Verify Account
+                </Button>
+              </Link>
             </Col>
             <Col></Col>
           </Row>

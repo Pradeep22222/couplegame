@@ -7,6 +7,7 @@ import { PartnerConnection } from "./components/PartnerConnection";
 import { Fblogin } from "./components/Fblogin";
 import { Facebooklogin } from "./components/Facebooklogin";
 import { Verification } from "./components/Verification";
+import { CloseTab } from "./components/CloseTab";
 
 function App() {
   return (
@@ -18,7 +19,6 @@ function App() {
             path="/connection"
             element={<PartnerConnection></PartnerConnection>}
           />
-  
 
           <Route path="/connection/login" element={<Fblogin></Fblogin>} />
 
@@ -29,6 +29,10 @@ function App() {
           <Route
             path="/connection/login/facebooklogin/confirmation"
             element={<Verification></Verification>}
+          />
+          <Route
+            path="/connection/login/facebooklogin/confirmation/close"
+            element={<CloseTab></CloseTab>}
           />
           <Route path="/" element={<Home></Home>} />
         </Routes>
