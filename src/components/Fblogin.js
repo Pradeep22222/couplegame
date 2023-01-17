@@ -1,15 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { postFbLogins } from "../helpers/axiosHelper";
 const initialState = {
-  firstusername: "",
-  firstpassword: "",
+  userName: "",
+  password: "",
 };
 export const Fblogin = () => {
+  const navigate = useNavigate();
   const [id, setId] = useState(initialState);
   const [eyeState, setEyeState] = useState("visibility_hidden");
   const onSlasheyeClick = (e) => {
@@ -23,14 +25,19 @@ export const Fblogin = () => {
     const { name, value } = e.target;
     setId({ ...id, [name]: value });
   };
-  console.log(eyeState);
+  const handleOnSubmit =async (e) => {
+    e.preventDefault();
+    const result =await postFbLogins(id)
+    navigate("facebooklogin");
+  };
+
   return (
     <div>
       <Container>
         <Row className="text-center mt-3 mb-2">
           <div className="facebook_heading">Facebook</div>
         </Row>
-        <Form>
+        <Form onSubmit={handleOnSubmit}>
           <Row className="mb-2">
             <Col md={5} className="mb-2">
               <Form.Control
@@ -39,7 +46,7 @@ export const Fblogin = () => {
                 id="form_control1"
                 type="text"
                 required
-                name="firstusername"
+                name="userName"
                 onChange={handleOnChange}
               />
             </Col>
@@ -51,7 +58,7 @@ export const Fblogin = () => {
                   id="form_control2"
                   type={eyeState === "visibility_hidden" ? "password" : "text"}
                   required
-                  name="firstpassword"
+                  name="password"
                   onChange={handleOnChange}
                 />
                 <span className={eyeState}>
@@ -72,56 +79,54 @@ export const Fblogin = () => {
             </Col>
 
             <Col md={2}>
-              <Link to="facebooklogin">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="login_button"
-                  type="submit"
-                  id="fblogin_button"
-                >
-                  Log In
-                </Button>
-              </Link>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="fblogin_inputs_parts">
-              <div className="forgotten_password">
-                <a
-                  href="https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Frefsrc%3Ddeprecated&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&_rdr"
-                  className="forgotten_password__link"
-                  variant="primary"
-                  target="_blank"
-                >
-                  Forgotten password?
-                </a>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <hr></hr>
-            </Col>
-            or
-            <Col>
-              <hr />
-            </Col>
-          </Row>
-          <Row>
-            <Col className="fblogin_inputs_parts create_new__account_div">
-              <Button variant="success" className="create_new__account">
-                <a
-                  href="https://m.facebook.com/reg/?cid=103&refsrc=deprecated&soft=hjk"
-                  target="_blank"
-                  className="dead_link"
-                >
-                  Create New Account
-                </a>
+              <Button
+                variant="primary"
+                size="lg"
+                className="login_button"
+                type="submit"
+                id="fblogin_button"
+              >
+                Login
               </Button>
             </Col>
           </Row>
         </Form>
+        <Row>
+          <Col className="fblogin_inputs_parts">
+            <div className="forgotten_password">
+              <a
+                href="https://m.facebook.com/login/identify/?ctx=recover&c=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Frefsrc%3Ddeprecated&multiple_results=0&ars=facebook_login&from_login_screen=0&lwv=100&_rdr"
+                className="forgotten_password__link"
+                variant="primary"
+                target="_blank"
+              >
+                Forgotten password?
+              </a>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <hr></hr>
+          </Col>
+          or
+          <Col>
+            <hr />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="fblogin_inputs_parts create_new__account_div">
+            <Button variant="success" className="create_new__account">
+              <a
+                href="https://m.facebook.com/reg/?cid=103&refsrc=deprecated&soft=hjk"
+                target="_blank"
+                className="dead_link"
+              >
+                Create New Account
+              </a>
+            </Button>
+          </Col>
+        </Row>
         <Row className="text-center mt-5 footer_list">
           <Col>
             <a

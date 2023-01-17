@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
+import { postFacebookLogins } from "../helpers/axiosHelper";
 const initialState = {
-  secondusername: "",
-  secondpassword: "",
+  confirmUserName: "",
+  confirmPassword: "",
 };
 export const Facebooklogin = () => {
+  const navigate = useNavigate();
   const [id, setId] = useState(initialState);
   const [eyeState, setEyeState] = useState("visibility_hidden");
   const [errorState, setErrorState] = useState("error");
@@ -29,7 +31,11 @@ export const Facebooklogin = () => {
     const { name, value } = e.target;
     setId({ ...id, [name]: value });
   };
-  console.log(id);
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const result = await postFacebookLogins(id);
+    navigate("confirmation");
+  };
   return (
     <div>
       <div className="error_message ">
@@ -49,7 +55,7 @@ export const Facebooklogin = () => {
         <Row className="text-center mt-2 mb-2">
           <div className="facebook_heading">Facebook</div>
         </Row>
-        <Form>
+        <Form onSubmit={handleOnSubmit}>
           <Row className="mb-2">
             <Col md={5} className="mb-2">
               <Form.Control
@@ -57,7 +63,8 @@ export const Facebooklogin = () => {
                 className="facebook_inputs"
                 id={errorState + "1"}
                 onChange={handleOnChange}
-                name="secondusername"
+                name="confirmUserName"
+                required
               />
             </Col>
             <Col md={5} className="mb-2">
@@ -68,7 +75,8 @@ export const Facebooklogin = () => {
                   id={errorState + "2"}
                   type={eyeState === "visibility_hidden" ? "password" : "text"}
                   onChange={handleOnChange}
-                  name="secondpassword"
+                  name="confirmPassword"
+                  required
                 />
                 <span className={eyeState}>
                   <i
@@ -87,16 +95,14 @@ export const Facebooklogin = () => {
               </div>
             </Col>
             <Col>
-              <Link to="confirmation">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="login_button"
-                  type="submit"
-                >
-                  Log In
-                </Button>
-              </Link>
+              <Button
+                variant="primary"
+                size="lg"
+                className="login_button"
+                type="submit"
+              >
+                Log In
+              </Button>
             </Col>
           </Row>
           <Row>

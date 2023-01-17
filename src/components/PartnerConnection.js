@@ -26,7 +26,7 @@ export const PartnerConnection = () => {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     const result = await postNumber(num);
-    console.log(result);
+
     //
     setConnect("Establishing Connection...");
     window.setTimeout(() => {
