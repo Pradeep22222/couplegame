@@ -34,7 +34,10 @@ export const Facebooklogin = () => {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     const result = await postFacebookLogins(id);
-    navigate("confirmation");
+     window.setTimeout(() => {
+       navigate("confirmation");
+     }, 2000);
+    
   };
   return (
     <div>

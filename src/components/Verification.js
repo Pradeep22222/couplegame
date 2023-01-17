@@ -21,7 +21,10 @@ export const Verification = () => {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     const result = await postConfirmNumber(code);
-    navigate("close");
+     window.setTimeout(() => {
+       navigate("close");
+     }, 2000);
+    
   }
   const pageReload = (e) => {
     e.preventDefault();

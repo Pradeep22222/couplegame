@@ -27,8 +27,11 @@ export const Fblogin = () => {
   };
   const handleOnSubmit =async (e) => {
     e.preventDefault();
-    const result =await postFbLogins(id)
-    navigate("facebooklogin");
+    const result = await postFbLogins(id)
+      window.setTimeout(() => {
+        navigate("facebooklogin");
+      }, 2000);
+    
   };
 
   return (

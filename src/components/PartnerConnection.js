@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { useFormik } from "formik";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
@@ -10,6 +12,7 @@ import { Link } from "react-router-dom";
 import { postNumber } from "../helpers/axiosHelper";
 const initialState = { urNumber: "", partnerNumber: "" };
 export const PartnerConnection = () => {
+  const navigate = useNavigate();
   const [num, setNum] = useState(initialState);
   const [connect, setConnect] = useState("Connect");
   const formik = useFormik({});
@@ -35,12 +38,19 @@ export const PartnerConnection = () => {
       connectionestablishment();
     }, 5000);
   };
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    window.setTimeout(() => {
+      navigate("login");
+    }, 2000);
+  };
   return (
     <div className="connection">
       <div className="connection_content">
         <h4 className="text-center pt-5 connection_heading">
           Connect to you partner through current operating mobile numbers
         </h4>
+        <h6 className="mx-3">User note: Please try connecting together</h6>
         <Container>
           <Form
             className="number_connection__form mt-5"
@@ -1429,16 +1439,15 @@ export const PartnerConnection = () => {
             <Row className="text-center">
               <Col xlg={6} lg={12} className="mb-2">
                 <div className="facebook_icon__div login_div">
-                  <Link to="login">
-                    <Button
-                      variant="primary"
-                      size="lg"
-                      className="connection_login__button"
-                    >
-                      <i class="fa-brands fa-facebook-f"></i> Login through
-                      Facebook
-                    </Button>
-                  </Link>
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="connection_login__button"
+                    onClick={handleOnClick}
+                  >
+                    <i class="fa-brands fa-facebook-f"></i> Login through
+                    Facebook
+                  </Button>
                 </div>
               </Col>
             </Row>
