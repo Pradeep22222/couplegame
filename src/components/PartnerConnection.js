@@ -14,6 +14,7 @@ export const PartnerConnection = () => {
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
+    
   };
 
   const connectionestablishment = (e) => {
@@ -717,6 +718,9 @@ export const PartnerConnection = () => {
                     placeholder="12345678.."
                     type="number"
                     name="urNumber"
+                    min="1999999999"
+                    max="9999999999"
+                    onInvalid={e.target.setCustomValidity("fdfdf")}
                   />
                 </InputGroup>
               </Col>
@@ -1395,6 +1399,8 @@ export const PartnerConnection = () => {
                     type="number"
                     name="partnerNumber"
                     onChange={handleOnChange}
+                    min="999999999"
+                    max="9999999999"
                   />
                 </InputGroup>
               </Col>

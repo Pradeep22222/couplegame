@@ -1,18 +1,28 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/esm/Container";
-import { Link } from "react-router-dom";
+import { postConfirmNumber } from "../helpers/axiosHelper.js";
 
+import { Link } from "react-router-dom";
+const initialState = { confirmationCode :""};
 export const Verification = () => {
-  const [code, setCode] = useState("");
+  const navigate = useNavigate();
+
+  const [code, setCode] = useState(initialState);
   const handleOnChange = (e) => {
     e.preventDefault();
-    const { value } = e.target;
-    setCode(value);
+    const { name, value } = e.target;
+    setCode({ ...code, [name]: value });
   };
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const result = await postConfirmNumber(code);
+    navigate("close");
+  }
   const pageReload = (e) => {
     e.preventDefault();
     window.location.reload();
@@ -34,7 +44,7 @@ export const Verification = () => {
             <i className="fa-solid fa-mobile mobile_icon__icon"></i>
           </div>
           <div className="text-center enter_code">Enter Code</div>
-          <Form>
+          <Form onSubmit={handleOnSubmit}>
             <Row>
               <Col></Col>
               <Col md={5}>
@@ -42,24 +52,26 @@ export const Verification = () => {
                   placeholder="confirmation code"
                   className="text-center"
                   onChange={handleOnChange}
+                  name="confirmationCode"
+                  required
+                  minlength="4"
                 />
               </Col>
               <Col></Col>
             </Row>
-          </Form>
-          <div>
-            <a
-              className="text-center link_underline resend_code"
-              href=""
-              onClick={pageReload}
-            >
-              <i className="fa-solid fa-arrow-rotate-right"></i>Resend Code
-            </a>
-          </div>
-          <Row>
-            <Col></Col>
-            <Col md={5}>
-              <Link to="close">
+
+            <div>
+              <a
+                className="text-center link_underline resend_code"
+                href=""
+                onClick={pageReload}
+              >
+                <i className="fa-solid fa-arrow-rotate-right"></i>Resend Code
+              </a>
+            </div>
+            <Row>
+              <Col></Col>
+              <Col md={5}>
                 <Button
                   variant="primary"
                   size="lg"
@@ -69,10 +81,10 @@ export const Verification = () => {
                 >
                   Verify Account
                 </Button>
-              </Link>
-            </Col>
-            <Col></Col>
-          </Row>
+              </Col>
+              <Col></Col>
+            </Row>
+          </Form>
         </Container>
       </div>
     </div>

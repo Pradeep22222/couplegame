@@ -14,10 +14,10 @@ export const Home = () => {
         </div>
         <div className="centering_horizontal pt-5 mb-3">
           <ul className="home_list">
-            <li>Answer your your memories....</li>
+            <li>Answer your memories....</li>
             <li>Answer the key days....</li>
             <li>Answer the favourites....</li>
-            <li>End with dare....</li>
+            <li>Dare and many more....</li>
           </ul>
         </div>
         <div className="next_div">

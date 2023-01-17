@@ -14,7 +14,7 @@ export const CloseTab = () => {
       </div>
       <div className=" centering_horizontal mt-2">
         <Button variant="danger">
-          <a href="https://www.google.com/" className="dead_link text-center">
+          <a href="https://www.google.com/" className="dead_link text-center  fw-bold">
             Close
           </a>
         </Button>
