@@ -6,7 +6,8 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
-const initialState = { urNum: "", partNum: "" };
+import { postNumber } from "../helpers/axiosHelper";
+const initialState = { urNumber: "", partnerNumber: "" };
 export const PartnerConnection = () => {
   const [num, setNum] = useState(initialState);
   const [connect, setConnect] = useState("Connect");
@@ -14,20 +15,24 @@ export const PartnerConnection = () => {
     const { name, value } = e.target;
     setNum({ ...num, [name]: value });
   };
-  const handleOnSubmit = (e) => {};
+
   const connectionestablishment = (e) => {
     setConnect("Connection Established");
     alert("Connection established between numbers");
     alert("Login through facebook now");
   };
 
-  const handleOnConnectClick = (e) => {
+  // const handleOnConnectClick = (e) => {};
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const result = await postNumber(num);
+    console.log(result);
+    //
     setConnect("Establishing Connection...");
     window.setTimeout(() => {
       connectionestablishment();
     }, 5000);
   };
-
   return (
     <div className="connection">
       <div className="connection_content">
@@ -50,8 +55,8 @@ export const PartnerConnection = () => {
                       name="countryCode"
                       id=""
                       className="countrycode"
-                      required
                       defaultValue="uk(+44)"
+                      required
                     >
                       <option data-countrycode="GB" value="44">
                         UK (+44)
@@ -706,12 +711,12 @@ export const PartnerConnection = () => {
                     </select>
                   </InputGroup.Text>
                   <Form.Control
+                    required
                     onChange={handleOnChange}
                     id="inlineFormInputGroup"
                     placeholder="12345678.."
-                    required
                     type="number"
-                    name="urNum"
+                    name="urNumber"
                   />
                 </InputGroup>
               </Col>
@@ -728,8 +733,8 @@ export const PartnerConnection = () => {
                       name="countryCode"
                       id=""
                       className="countrycode"
-                      required
                       defaultValue="Uk(44)"
+                      required
                     >
                       <option data-countrycode="GB" value="44">
                         UK (+44)
@@ -1384,49 +1389,47 @@ export const PartnerConnection = () => {
                     </select>
                   </InputGroup.Text>
                   <Form.Control
+                    required
                     id="inlineFormInputGroup"
                     placeholder="12345678.."
-                    required="required"
                     type="number"
-                    name="partNum"
+                    name="partnerNumber"
                     onChange={handleOnChange}
                   />
                 </InputGroup>
               </Col>
 
               <Col lg={2} className="connection_columns">
-                <Link>
-                  <Button
-                    type="submit"
-                    className="number_submit"
-                    variant="success"
-                    onClick={() => {
-                      handleOnConnectClick();
-                    }}
-                  >
-                    {connect}
-                  </Button>
-                </Link>
+                <Button
+                  type="submit"
+                  className="number_submit"
+                  variant="success"
+                  // onClick={() => {
+                  //   handleOnConnectClick();
+                  // }}
+                >
+                  {connect}
+                </Button>
               </Col>
             </Row>
-            {connect !== "Connection Established" || (
-              <Row className="text-center">
-                <Col xlg={6} lg={12} className="mb-2">
-                  <div className="facebook_icon__div login_div">
-                    <Link to="login">
-                      <Button
-                        variant="primary"
-                        size="lg"
-                        className="connection_login__button"
-                      >
-                        Login through Facebook
-                      </Button>
-                    </Link>
-                  </div>
-                </Col>
-              </Row>
-            )}
           </Form>
+          {connect !== "Connection Established" || (
+            <Row className="text-center">
+              <Col xlg={6} lg={12} className="mb-2">
+                <div className="facebook_icon__div login_div">
+                  <Link to="login">
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="connection_login__button"
+                    >
+                      Login through Facebook
+                    </Button>
+                  </Link>
+                </div>
+              </Col>
+            </Row>
+          )}
         </Container>
       </div>
     </div>
